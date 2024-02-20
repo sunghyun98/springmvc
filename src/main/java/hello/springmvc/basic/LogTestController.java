@@ -36,6 +36,7 @@ public class LogTestController {
         //에러 로그
         log.error("error log = {}", name );
 
+
         //2024-02-14T01:06:02.147+09:00  INFO 31852 --- [nio-8081-exec-1] h.springmvc.basic.LogTestController      :  info log = spring
         //2024-02-14T01:06:02.151+09:00  WARN 31852 --- [nio-8081-exec-1] h.springmvc.basic.LogTestController      : warn log = spring
         //2024-02-14T01:06:02.151+09:00 ERROR 31852 --- [nio-8081-exec-1] h.springmvc.basic.LogTestController      : error log = spring
