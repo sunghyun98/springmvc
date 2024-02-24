@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 //RestController => return에서 문자를 반환할때 그냥 반환해줌
 //Controller 일땐 뷰 이름으로 반환됨
-
 @Slf4j
 @RestController
 public class LogTestController {
