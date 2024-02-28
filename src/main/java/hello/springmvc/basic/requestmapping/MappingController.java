@@ -2,6 +2,7 @@ package hello.springmvc.basic.requestmapping;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -48,14 +49,13 @@ public class MappingController {
      * 경로변수
      */
     @GetMapping("/mapping/{userId}")
-    public String mappingPath(@PathVariable("userId") String data){
-        log.info("mappingPath userId ={}",data);
-        //mappingPath userId =userA
+    public String mappingPath(@PathVariable("userId") String data) {
+        log.info("mappingPath userId={}", data);
         return "ok";
     }
 
     //@PathVariable 다중사용
-    @GetMapping("/mapping/{userId}/orders/{orderId}")
+    @GetMapping("/mapping/users/{userId}/orders/{orderId}")
     public String mappingPath(@PathVariable String userId, @PathVariable String orderId){
         log.info("mappingPath userId ={}, orderId = {}",userId, orderId);
 
@@ -98,7 +98,7 @@ public class MappingController {
      *
      * 소비하는 입장에서 consumes
      */
-    @PostMapping(value = "/mapping-consume", consumes = "application/json")
+    @PostMapping(value = "/mapping-consume", consumes = MediaType.APPLICATION_JSON_VALUE)
     public String mappingConsumes() {
         log.info("mappingConsumes");
         return "ok";
@@ -114,7 +114,7 @@ public class MappingController {
      *
      * 생산하는 입장에서 produces
      */
-    @PostMapping(value = "/mapping-produce", produces = "text/html")
+    @PostMapping(value = "/mapping-produce", produces = MediaType.TEXT_HTML_VALUE)
     public String mappingProduces() {
         log.info("mappingProduces");
         return "ok";
