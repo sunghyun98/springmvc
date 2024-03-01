@@ -25,6 +25,7 @@ public class RequestHeaderController {
                           @RequestHeader("host") String host,
                           @CookieValue(value = "myCookie", required = false)
                               String cookie){
+
         log.info("request={}", request);
         log.info("response={}", response);
         log.info("httpMethod={}", httpMethod);
