@@ -28,6 +28,7 @@ public class MappingClassController {
         return "get user = " + userId;
     }
 
+
     @PatchMapping("/{userId}")
     public String updateUser(@PathVariable String userId){
         return "update userId = " + userId;
