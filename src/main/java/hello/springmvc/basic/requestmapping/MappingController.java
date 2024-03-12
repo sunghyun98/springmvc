@@ -54,6 +54,7 @@ public class MappingController {
         return "ok";
     }
 
+
     //@PathVariable 다중사용
     @GetMapping("/mapping/users/{userId}/orders/{orderId}")
     public String mappingPath(@PathVariable String userId, @PathVariable String orderId){
