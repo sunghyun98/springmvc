@@ -41,7 +41,6 @@ public class MappingController {
         log.info("mappingGetV2");
         return "ok";
     }
-
     /**
      * PathVariable 사용
      * 변수명이 같으면 생략 가능
