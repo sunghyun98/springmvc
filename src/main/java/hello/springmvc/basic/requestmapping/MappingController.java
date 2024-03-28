@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MappingController {
-
     private Logger log = LoggerFactory.getLogger(getClass());
 
     //{"/hello-basic", "/hello-go"} or 둘 중에 하나 가능
