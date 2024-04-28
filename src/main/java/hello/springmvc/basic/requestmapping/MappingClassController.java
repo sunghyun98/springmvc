@@ -12,6 +12,9 @@ public class MappingClassController {
      * 회원 수정: PATCH /users/{userId}
      * 회원 삭제: DELETE /users/{userId}
      * 인프런MVC2 강의
+     *
+     * @PathVariable
+     * ex) naver.com/100
      */
 
     @GetMapping
@@ -19,7 +22,7 @@ public class MappingClassController {
         return "get users";
     }
     @PostMapping
-    public String addUser(){
+    public String addUser() {
         return "post user";
     }
 

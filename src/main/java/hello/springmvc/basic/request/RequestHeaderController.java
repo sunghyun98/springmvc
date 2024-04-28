@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Locale;
 
+/**
+ * Http 헤더정보
+ */
 @Slf4j
 @RestController
 public class RequestHeaderController {
@@ -20,7 +23,7 @@ public class RequestHeaderController {
     public String headers(HttpServletRequest request,
                           HttpServletResponse response,
                           HttpMethod httpMethod,
-                          Locale locale,
+                          Locale locale, //언어정보
                           @RequestHeader MultiValueMap<String, String> headerMap,
                           @RequestHeader("host") String host,
                           @CookieValue(value = "myCookie", required = false)
